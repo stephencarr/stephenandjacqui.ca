@@ -1,0 +1,29 @@
+{
+  "name": "gulp-static-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charltoons/gulp-static-boilerplate.git"
+  },
+  "author": "Charlton Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charltoons/gulp-static-boilerplate/issues"
+  },
+  "devDependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-coffee": "~1.2.5",
+    "gulp-jade": "~0.3.0",
+    "gulp-less": "^3.0.5",
+    "gulp-sass": "^2.1.0",
+    "gulp-util": "~2.2.6",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "main-bower-files": "^2.9.0",
+    "run-sequence": "^1.1.5"
+  }
+}

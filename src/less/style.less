@@ -1,0 +1,85 @@
+@import (inline) "./bower_components/normalize-css/normalize.css";
+//@import (inline) "./bower_components/fullpage.js/jquery.fullPage.css";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #614C3B;
+  background: url('/assets/images/sj_3.svg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+body:before{
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 0;
+  bottom: -7px;
+  z-index: 1;
+  box-shadow: 0 0 19px 12px rgba(0,0,0,.7);
+}
+
+*:focus {
+    outline: 0;
+}
+
+.xo {
+  background: url('http://i.imgur.com/PVsWKUM.png') no-repeat center center;
+  height: 945px;
+  width: 100%;
+  position: relative;
+}
+
+.xo__h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  top: 1.8rem;
+}
+
+.xo__box {
+  bottom: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.xo__h1,
+.xo__box {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.xo__p,
+.xo__p--subtext {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.xo__p--subtext {
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+.xo__button {
+  background: #CB1C01;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: .5rem 2rem;
+  border: 1px solid #9A4537;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  box-shadow: inset 0 0 24px -4px #000;
+  outline: 0;
+  &:hover {
+    background: #780A02;
+    box-shadow: inset 0 0 14px -4px #000;
+  }
+}
