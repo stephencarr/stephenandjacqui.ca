@@ -1,14 +1,69 @@
-@import (inline) "./bower_components/normalize-css/normalize.css";
-//@import (inline) "./bower_components/fullpage.js/jquery.fullPage.css";
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+  text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+  font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
 
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #614C3B;
-  background: url('/assets/images/sj_3.svg') no-repeat center center fixed;
+  background-color: #A52928;
+  // background: url('/assets/images/sj_3.svg') no-repeat center center fixed;
   background-size: cover;
-  font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  @media @tablet {
+    font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+}
+
+.blank {
+  background: #A52928;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body:before{
@@ -23,6 +78,43 @@ body:before{
 
 *:focus {
     outline: 0;
+}
+/* End Reset CSS
+ * --------------------------------------- */
+
+@import (inline) "./bower_components/fullpage.js/jquery.fullPage.css";
+
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+@phone:          ~"only screen and (min-width: @{xs-min})";
+@phone-strict:   ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet:         ~"only screen and (min-width: @{sm-min})";
+@tablet-strict:  ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop:        ~"only screen and (min-width: @{md-min})";
+@desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large:          ~"only screen and (min-width: @{lg-min})";
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(30px);
+  }
+  60% {
+    transform: translateY(15px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
 }
 
 .xo {
@@ -82,4 +174,202 @@ body:before{
     background: #780A02;
     box-shadow: inset 0 0 14px -4px #000;
   }
+}
+
+.rsvp_button {
+  background: #4A90E2;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: .5rem 2rem;
+  border: 1px solid #3E7CC4;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  box-shadow: inset 0 0 24px -4px #000;
+  outline: 0;
+  &:hover {
+    background: #3E7CC4;
+    box-shadow: inset 0 0 14px -4px #000;
+  }
+  @media @tablet {
+    font-size: 1.3rem;
+  }
+}
+
+#fullpage {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 3s linear;
+  a {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: underline;
+    @media @tablet {
+      font-weight: 400;
+      text-decoration: none;
+    }
+  }
+  a.rsvp_button {
+    text-decoration: none;
+  }
+}
+
+.fp-tableCell {
+  padding: 20px;
+  @media @tablet {
+    padding: 0;
+  }
+}
+
+.strapped {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.strapped--wide {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.h1, .h2, .h3 {
+  font-family: 'Oleo Script', cursive;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.h1 {
+  font-size: 38px;
+  line-height: 1;
+  @media @tablet {
+    font-size: 48px;
+    line-height: 1.4;
+  }
+}
+
+.h1--with-dot {
+  margin-bottom: 68px;
+  position: relative;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -34px;
+  }
+}
+
+.h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  @media @tablet {
+    font-size: 33px;
+    line-height: 1.4;
+  }
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.p {
+  line-height: 1.4;
+  margin: 9px 0;
+  font-size: 16px;
+  color: #fff;
+  @media @tablet {
+    font-size: 18px;
+  }
+}
+
+.p--title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  small {
+    opacity: 0.7;
+  }
+}
+
+.p--with-dot {
+  margin-bottom: 90px;
+  position: relative;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -55px;
+  }
+}
+
+.center_me {
+  margin: 0 auto;
+}
+
+.polaroid {
+  padding: 10px;
+  width: 516px;
+  max-width: 95%;
+  background: #fff;
+  box-shadow: inset 0 0 14px -4px #000;
+  margin-bottom: 20px;
+}
+
+.polaroid__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.polaroid__text .h3 {
+  margin: 10px 0 10px;
+  color: #A52928;
+  line-height: 1;
+}
+
+
+.arrow--down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #000;
+  opacity: 0.3;
+}
+
+.img_circ {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px white solid;
+  img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.map {
+  margin-top: 10px;
+  border: 10px white solid;
+  line-height: 0;
+  display: inline-block;
+  width: 500px;
+  max-width: 90%;
 }

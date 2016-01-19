@@ -1,11 +1,94 @@
 extends layouts/master
 
 block content
+  div(id="fullpage")
 
-    div(id="xo" class="xo")
-      h1(class="xo__h1") We're getting married
-      div(class="xo__box")
-        p(class="xo__p") Come join us September 17th + 18th 2016
-        p
-          a(class="xo__button" href="http://bit.ly/1NgTb6C" target="_blank") RSVP!
-        p(class="xo__p--subtext") More details to follow!
+    div(class="section active" id="section0")
+      div(class="polaroid center_me")
+        div(class="polaroid__image")
+          img(src="http://i.imgur.com/PVsWKUM.png")
+        div(class="polaroid__text")
+          <h1 class="h3">These two weirdos are getting hitched</h1>
+          <h2 class="h3">Here's what you need to know</h2>
+      div(class="arrow--down center_me bounce")
+
+    div(class="section" id="section1")
+      div(class="center_me")
+        p(class="h2") Join us September 17th + 18th, 2016
+        p(class="h2") Coussac Bonneval, France
+        p(class="p" style="margin-top: 33px;")
+         a(class="rsvp_button" style="margin-top: 5px;" href="http://bit.ly/1NgTb6C" target="_blank") RSVP!
+         small(style="display: block; margin-top: 20px") (Even if you've informally RSVP'd by email)
+
+    div(class="section" id="section2")
+      div(class="img_circ center_me" style="margin-bottom: 10px")
+        img(src="/assets/images/priory_circ.png")
+      p(class="h1") Le Prieuré de Coussac-Bonneval
+      p(class="p")
+        a(href="http://www.prieurecoussac.com" target="_blank") www.prieurecoussac.com
+      div(class="map")
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.9531771518477!2d1.3194409158986717!3d45.51102117910158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f8d151d2ff1961%3A0x5926a9ab053f1d2e!2sLe+Prieur%C3%A9+de+Coussac-Bonneval!5e0!3m2!1sen!2sca!4v1452477153242" width="100%" height="410" frameborder="0" style="border:0" allowfullscreen)
+
+    div(class="section" id="section3")
+      p(class="h1 h1--with-dot") What's the plan?
+      div(class="strapped")
+        p(class="p p--title") September 17th - Mariage &amp; Fête
+        p(class="p") 3:00pm - Arrive at the Priory
+        p(class="p") 3:30pm - Le Mariage
+        p(class="p") Followed by champagne and amuse bouche
+        p(class="p") 5:30pm - Dinner is served
+        p(class="p p--with-dot") Followed by a night of music, dancing, and fun!
+
+        p(class="p p--title") September 18th - BBQ &amp; Soirée Piscine
+        p(class="p") 1:00pm - Join us at the Priory for a BBQ, games, and drinks.<br>Bring swimmers if you'd like to take a dip in the pool!
+
+    div(class="section" id="section4")
+      p(class="h1 h1--with-dot") How the devil do we get there?
+      div(class="strapped--wide")
+        p(class="p p--title" style="margin-top: 33px") From North America
+        p(class="p p--with-dot") Fly into Paris and make your way to Limoges. Trains leave form Gare Austerlitz, check the <a href="http://www.voyages-sncf.com/" target="_blank">SNCF website</a> for schedules and tickets. Once in Limoges rent a car and drive 45 minutes to Coussac&nbsp;Bonneval.
+
+        p(class="p p--title") From Europe
+        p(class="p p--with-dot") If you live in the UK you may be able to fly into Limoges airport, both Flybe and Ryan Air fly to Limoges. Other parts of Europe you may find flights to Limoges, else there are trains from Paris to Limoges leaving from Gare Austerlitz; check the <a href="http://www.voyages-sncf.com/" target="_blank">SNCF website</a> for schedules and tickets. Once in Limoges rent a car and drive 45 minutes to Coussac&nbsp;Bonneval.
+        p(class="h3") Carpool, Make New Friends!
+        p(class="p") Carpooling is fun! If you need help with transit or have space in your car please add your name to the <a href="https://docs.google.com/spreadsheets/d/1K1ZlIJceNUw2cBrLrquUmVDbvr_qjeEG1TIST9ARAoM/edit?usp=sharing" target="_blank">carpool list</a> and try and help each other out.
+
+    div(class="section" id="section5")
+      p(class="h1") Accomodation
+
+      div(class="strapped")
+        p(class="p p--title") Coussac Bonneval<br><small>(walking distance from the priory)</small>
+        p(class="p") <a href="http://www.voyageurskaolin.com/en/hotel.html" target="_blank">L'Hôtel des Voyageurs</a> - only hotel in the village
+        p(class="p") <a href="http://www.la-bastide.nl/en_gb/holiday-home-haute-vienne.htm" target="_blank">Gîtes La-Bastide</a> - beautiful holiday home for 4 people
+        p(class="p") <a href="http://www.gites-de-france.com/location-vacances-Coussac-bonneval-Gite-bois-Machau-Gite-Au-Pre-87G6042.html" target="_blank">Gîte Bois</a> - cute rustic cottage, sleeps 4
+        p(class="p") <a href="http://www.gites-de-france.com/location-vacances-Coussac-bonneval-Gite-gite-Aux-Fleurs-87G6043.html" target="_blank">Gîtes Aux Fluers</a> - holiday cottage with a pool, sleeps 7
+        p(class="p") <a href="http://www.moulin-marsaguet.com/" target="_blank">Marsaguet Mill</a> - guest rooms and a cottage
+        p(class="p p--with-dot") <a href="http://www.campingfrance.com/uk/find-your-campsite/limousin/haute-vienne/coussac-bonneval/les-allees" target="_blank">Les Alles</a> - camping
+        p(class="p p--title" style="margin-top: 33px") Just outside Coussac Bonneval
+        p(class="p") <a hefre="http://www.moulinauthier.com/" target="_blank">Gîtes Moulin Authier</a> - cottages next to a fishing lake, great for groups
+        p(class="p p--with-dot") <a href="http://www.domainedelangelaud.com/" target="_blank">Angelaud</a> - fancy caravans and guest rooms by the lake
+        p(class="p p--title") There are more accomodation ideas on the next page
+
+    div(class="section" id="section6")
+      p(class="h1") Accomodation continued
+
+      div(class="strapped")
+        p(class="p p--title") St Yrieix la Perche <br> <small>St Yrieix is the next closest town to Coussac, 11km away from the venue and approx 15 minutes drive</small>
+        p(class="p") <a href="http://www.voyageurskaolin.com/en/hotel.html" target="_blank">L'Hôtel les Platanes</a> - small hotel
+        p(class="p") <a href="http://www.latourblanche87.com/" target="_blank">Hôtel Restaurant La Tour Blanche</a> - larger hotel by the lake
+        p(class="p") <a href="http://laresidencelimousin.com/" target="_blank">La Residence Limousin</a>   - 4 star hotel
+        p(class="p") <a href="http://www.saint-yrieix.fr/decouvrir-2/le-lac-et-le-camping-darfeuille/" target="_blank">Camping d’Arfeuille</a> - campsite and chalets
+        p(class="p p--with-dot") <a href="https://www.bedandbreakfast.eu/bed-and-breakfast/saint-yrieix-la-perche/la-foucaudie/983839/" target="_blank">La Foucaudie</a> - unique 8 bedroom house with pool
+        p(class="p p--title") Elsewhere
+        p(class="p") <a href="http://www.lepelateau.com/" target="_blank">Le Pelateau</a> - bed and breakfast, gîte accommodation
+
+    div(class="section" id="section6")
+      p(class="h1") See you soon!
+        div(class="strapped")
+          p(class="p") We look forward to seeing you in September.
+          p(class="p") If you haven't done so already, please RSVP!
+          p(class="p" style="margin-top: 33px;")
+            a(class="rsvp_button" style="margin-top: 5px;" href="http://bit.ly/1NgTb6C" target="_blank") RSVP!
+            small(style="display: block; margin-top: 20px") (Even if you've informally RSVP'd by email)
+
+
