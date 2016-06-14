@@ -1,7 +1,25 @@
 extends layouts/master
 
 block content
-  div(id="fullpage")
+  div(class="halfmoon") Nelson Weekend<br>This Way &#10165;</div>
+
+  div(id="fullpage-wedding")
+
+    ul(id="menu")
+      li.active(data-menuanchor='hey')
+        a(href='#hey') Welcome
+      li(data-menuanchor='rsvp')
+        a(href='#rsvp') RSVP
+      li(data-menuanchor='where')
+        a(href='#where') Location
+      li(data-menuanchor='plan')
+        a(href='#plan') Schedule
+      li(data-menuanchor='trip')
+        a(href='#trip') Travel Options
+      li(data-menuanchor='stay')
+        a(href='#stay') Where to Stay
+      li(data-menuanchor='registry')
+        a(href='#registry') Registry
 
     div(class="section active" id="section0")
       div(class="polaroid center_me")
@@ -82,7 +100,28 @@ block content
         p(class="p p--title") Elsewhere
         p(class="p") <a href="http://www.lepelateau.com/" target="_blank">Le Pelateau</a> - bed and breakfast, gîte accommodation
 
-    div(class="section" id="section6")
+    div(class="section" id="section7")
+      p(class="h1") Registry
+        div(class="strapped--wide")
+          p(class="p") We have much of everything that we need in this world. However there are a couple of things that we have not afforded ourselves of which we'd be most grateful of a contribution toward.
+          table(border="0" class="registry-items")
+            tr
+              td
+                p(class="p p--title" style="margin: 0;") Roomba ($450)
+            tr
+            tr
+              td
+                p(class="p") We have two orange cats and while they bro around the house getting into scraps and shenanigans they deposit their fur everywhere. This robotic vacuum will hopefully become their new play friend and save us from vacuuming up a whole cats worth of fur every other week.
+            tr
+              td
+                img(src="http://i.imgur.com/339Hb12.gif")
+                //img(src="http://i.giphy.com/h6AMD4GXFxO2k.gif")
+          div(class="strapped")
+            p(class="p") You may send us any amount of cold hard Canadian dollars you like via Paypal using a credit card by clicking the button below. We're so grateful!
+            p(class="p" style="margin-top: 33px;")
+              a(class="rsvp_button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=stephen%2ecarr%40gmail%2ecom&lc=US&item_name=Wedding%20Fund&no_note=0&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest" target="_blank") Donate now!
+
+    div(class="section" id="section8")
       p(class="h1") See you soon!
         div(class="strapped")
           p(class="p") We look forward to seeing you in September.
